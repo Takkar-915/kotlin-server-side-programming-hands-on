@@ -18,12 +18,12 @@ class BookRepositoryImpl(
         return bookWithRentalMapper.select().map { toModel(it) }
     }
 
-    private fun toModel(record: BookWithRentalRecord): BookWithRental {
+    private fun toModel(record: BookWithRentalRecord): BookWithRental{
         val book = Book(
             record.id!!,
             record.title!!,
             record.author!!,
-            record.rentalDateTime!!,
+            record.releaseDate!!
         )
         val rental = record.userId?.let {
             Rental(
@@ -33,6 +33,6 @@ class BookRepositoryImpl(
                 record.returnDateTime!!
             )
         }
-        return BookWithRental(book, rental)
+        return BookWithRental(book,rental)
     }
 }
