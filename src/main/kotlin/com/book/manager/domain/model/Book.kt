@@ -1,11 +1,10 @@
 package com.book.manager.domain.model
 
-import java.time.LocalDateTime
-
+import java.time.LocalDate
 
 data class Book(
     val id: Long,
     val title: String,
     val author: String,
-    val releaseDateTime: LocalDateTime
+    val releaseDateTime: LocalDate
 )

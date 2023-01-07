@@ -1,6 +1,6 @@
 package com.book.manager.domain.model
 
-class BookWithRental(
+data class BookWithRental(
     val book: Book,
     val rental: Rental?
 ){
