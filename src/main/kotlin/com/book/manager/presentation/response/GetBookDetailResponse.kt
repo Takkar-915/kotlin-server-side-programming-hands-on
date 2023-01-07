@@ -16,7 +16,7 @@ data class GetBookDetailResponse(
         model.book.id,
         model.book.title,
         model.book.author,
-        model.book.releaseDateTime,
+        model.book.releaseDate,
         model.rental?.let { RentalInfo(model.rental) }
     )
 }

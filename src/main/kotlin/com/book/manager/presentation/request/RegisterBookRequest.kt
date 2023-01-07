@@ -1,8 +1,8 @@
-package com.book.manager.domain.model
+package com.book.manager.presentation.request
 
 import java.time.LocalDate
 
-data class Book(
+data class RegisterBookRequest(
     val id: Long,
     val title: String,
     val author: String,
