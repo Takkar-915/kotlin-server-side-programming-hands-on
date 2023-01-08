@@ -37,8 +37,8 @@ class RentalService (
         userRepository.find(userId) ?: throw IllegalArgumentException("該当するユーザが存在しません userId:${userId}")
         val book = bookRepository.findWithRental(bookId) ?: throw IllegalArgumentException("該当する書籍が存在しません bookId:${bookId}")
 
-        if (!book.isRental) throw IllegalArgumentException("未貸出の書籍です bookId:${bookId}")
-        if (book.rental!!.userId != userId) throw IllegalArgumentException("他のユーザが貸出中の商品です userId:${userId} bookId:${bookId}")
+        if (!book.isRental) throw IllegalStateException("未貸出の書籍です bookId:${bookId}")
+        if (book.rental!!.userId != userId) throw IllegalStateException("他のユーザーが貸出中の商品です userId:${userId} bookId:${bookId}")
 
         rentalRepository.endRental(bookId)
     }
