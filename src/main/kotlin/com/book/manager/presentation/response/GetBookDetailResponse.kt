@@ -29,6 +29,6 @@ data class RentalInfo(
     constructor(rental: Rental) : this(
         rental.userId,
         rental.rentalDateTime,
-        rental.returnDateTime
+        rental.returnDeadline
     )
 }

@@ -9,6 +9,6 @@ data class BookWithRentalRecord(
     val author: String? = null,
     val releaseDate: LocalDate? = null,
     val userId: Long? = null,
-    val rentalDateTime: LocalDateTime? = null,
-    val returnDateTime: LocalDateTime? = null
+    val rentalDatetime: LocalDateTime? = null,
+    val returnDeadline: LocalDateTime? = null
 )
