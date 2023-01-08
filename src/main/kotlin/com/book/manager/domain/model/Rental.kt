@@ -6,5 +6,5 @@ data class Rental(
     val bookId: Long,
     val userId: Long,
     val rentalDateTime: LocalDateTime,
-    val returnDateTime: LocalDateTime
+    val returnDeadline: LocalDateTime
 )
